@@ -1,10 +1,10 @@
 <script setup>
-import {ref} from 'vue'
+import {ref,defineAsyncComponent} from 'vue'
 import {useRouter} from 'vue-router'
-import Tab1Component from "./TabComponent.vue";
-import Tab2Component from "./Tab2Component.vue";
-import Tab3Component from "./Tab3Component.vue";
-import TabComponent from "./TabComponent.vue";
+const Tab1Component = defineAsyncComponent(()=>import('./Tab1Component.vue'))
+const Tab2Component = defineAsyncComponent(()=>import('./Tab2Component.vue'))
+const Tab3Component = defineAsyncComponent(()=>import('./Tab3Component.vue'))
+const TabComponent = defineAsyncComponent(()=>import('./TabComponent.vue'))
 
 //  dropdown state 
 const dropdownVisible = ref(false);
