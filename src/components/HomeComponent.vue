@@ -27,8 +27,8 @@ const navbarItems = {
 <!-- views/HomeComponent.vue -->
 
 <script setup>
-  import ChildComponent from './ChildComponent.vue'
-  import {ref} from 'vue'
+  import {ref,defineAsyncComponent} from 'vue'
+  const ChildComponent = defineAsyncComponent(()=>import('./ChildComponent.vue'))
   let messageFromChild = ref('')
   const handleChildClick = (message)=>{
         messageFromChild.value = message
