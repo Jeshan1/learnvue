@@ -1,14 +1,15 @@
 import { createRouter,createWebHistory } from "vue-router";
-import Home from '../components/HomeComponent.vue'
-import About from '../components/AboutComponent.vue'
-import Blog from '../components/BlogComponent.vue'
-import Profile from "../components/ProfileComponent.vue";
-import Setting from "../components/SettingComponent.vue"
-import Pinia from "../components/PiniaComponent.vue"
-import Contact from "../components/ContactComponent.vue"
-import Task from "../components/TaskComponent.vue";
-import Validation from "../components/ValidationComponent.vue"
-import Test from "../components/TestComponent.vue"
+
+const Home = () => import('@/components/HomeComponent.vue')
+const About = () => import('@/components/AboutComponent.vue')
+const Blog = () => import('@/components/BlogComponent.vue')
+const Profile = () => import('@/components/ProfileComponent.vue')
+const Setting = () => import('@/components/SettingComponent.vue')
+const Pinia = () => import('@/components/PiniaComponent.vue')
+const Contact = () => import('@/components/ContactComponent.vue')
+const Task = () => import('@/components/TaskComponent.vue')
+const Validation = () => import('@/components/ValidationComponent.vue')
+const Test = () => import('@/components/TestComponent.vue')
 const routes = [
     {
         path:'/',
